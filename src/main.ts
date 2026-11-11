@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule, ObserveInstrument } from './app.module.js';
+import { AppModule } from './app.modules.js';
+import { ObserveInstrument } from './observe.js';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
