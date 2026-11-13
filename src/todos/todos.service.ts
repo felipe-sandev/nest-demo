@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { TodosRepository } from './todos.repository.js';
 
 @Injectable()
 export class TodosService {
+  constructor(private todosRepository: TodosRepository) {}
   getTodos() {
-    return ['test', 'test2'];
+    return this.todosRepository.getTodos();
   }
 }
